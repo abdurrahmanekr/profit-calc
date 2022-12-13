@@ -16,8 +16,8 @@ function App() {
       margin: '10px'
     }}>
       <div>
-        <font color="red">{profitCalc(purchasePrice, profit, commission, floor, cargo, 0).toFixed(2)}</font>₺ En az satılması gereken fiyat <br/> 
-        <font color="green">{profitCalc(purchasePrice, profit, commission, floor, cargo, maxDiscount).toFixed(2)}</font>₺ İndirimsiz fiyat</div> 
+        <font color="red">{profitCalc(purchasePrice, parseFloat(profit), parseFloat(commission), floor, parseFloat(cargo), 0).toFixed(2)}</font>₺ En az satılması gereken fiyat <br/> 
+        <font color="green">{profitCalc(purchasePrice, parseFloat(profit), parseFloat(commission), floor, parseFloat(cargo), parseFloat(maxDiscount)).toFixed(2)}</font>₺ İndirimsiz fiyat</div> 
       <p></p>
       <div>Alış Fiyatı</div>
       <input type="text" defaultValue={purchasePrice} onChange={(e) => {
