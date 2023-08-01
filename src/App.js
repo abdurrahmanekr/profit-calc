@@ -62,9 +62,9 @@ function App() {
 
 function profitCalc(alisFiyat, kar = 10, komisyon = 0.2, floor = true, kargo = 15, maxIndirim = 0.3) {
   let result = (-kargo - alisFiyat - kar) / (-1+komisyon);
-  let toplamKdv = (kargo * 0.18) / (0.18+1) + (result * komisyon * 0.18) / (0.18+1) + (alisFiyat * 0.08) / (0.08+1);
+  let toplamKdv = (kargo * 0.2) / (0.2+1) + (result * komisyon * 0.2) / (0.2+1) + (alisFiyat * 0.1) / (0.1+1);
 
-  let odenecekKdv = (result * 0.08) / (0.08+1);
+  let odenecekKdv = (result * 0.1) / (0.1+1);
   toplamKdv = odenecekKdv - toplamKdv;
 
   // devlete verilecek para çıktı
